@@ -18,6 +18,6 @@ EOF
 
 echo "::notice decrypting file..."
 
-sops --decrypt $INPUT_FILE  > .$OUTPUT_FILE
+echo "contents=$(sops --decrypt $INPUT_FILE )" >>"$GITHUB_OUTPUT"
 
 exit 0

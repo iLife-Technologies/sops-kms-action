@@ -1,4 +1,4 @@
-name: 'SOPS Decrypt'
+name: 'KMS SOPS Decrypt'
 description: 'Decrypts files encrypted with SOPS using AWS KMS keys.'
 author: 'iLife-Technologies'
 
@@ -8,11 +8,12 @@ inputs:
     description: 'KMS key ARN to be used for decryption'
     required: true
   input-file:
-    description: 'File that will be decrypted'
+    description: 'Path to encrypted file'
     required: true
-  output-file:
-    description: 'File for the decrypted contents'
-    required: true
+
+outputs:
+  contents:
+    description: 'Unencrypted contents of the input file'
 
 runs:
   using: docker

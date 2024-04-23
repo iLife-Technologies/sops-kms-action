@@ -12,7 +12,7 @@ permissions:
 jobs:
   test-docker:
     name: Docker Tests
-    runs-on: ubuntu-latest
+    runs-on: runner-medium
 
     # Run a local registry to push to
     services:
@@ -22,7 +22,7 @@ jobs:
           - 5001:5000
 
     env:
-      TEST_TAG: localhost:5001/actions/container-action:latest
+      TEST_TAG: localhost:5001/iLife-Technologies/sops-action:latest
 
     steps:
       - name: Checkout
