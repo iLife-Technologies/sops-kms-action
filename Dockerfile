@@ -1,5 +1,6 @@
 # Set the base image to use for subsequent instructions
-FROM alpine:3.19
+FROM ghcr.io/getsops/sops:v3.8.1-alpine
+
 
 # Set the working directory inside the container
 WORKDIR /usr/src
