@@ -8,7 +8,10 @@ inputs:
     description: 'KMS key ARN to be used for decryption'
     required: true
   input-file:
-    description: 'Path to encrypted file'
+    description: 'Path to encrypted input file'
+    required: true
+  output-file:
+    description: 'Path to unencrypted output file'
     required: true
 
 outputs:
